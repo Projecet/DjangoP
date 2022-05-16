@@ -1,0 +1,64 @@
+<script>
+  function display(){
+    var title = document.querySelectorAll('.news_title');
+    for(t of title){
+        t.innerHTML = t.innerText;
+    };
+    var description = document.querySelectorAll('.news_description');
+    for(d of description){
+        d.innerHTML = d.innerText;
+    };
+  };
+
+  $(document).ready(function(){
+    display();
+  });
+</script>
+<div class="container">
+    <div class="d-flex justify-content-center my-3">
+        <a class="btn-sm btn-secondary btn-block float-start text-decoration-none me-sm-3" href="/">돌아가기</a>
+    </div>
+    {% for i in items %}
+        <div class="row justify-content-center">
+            <div class="col-lg-9 mb-3">
+                <a class="text-decoration-none text-black" href="{{i.link}}">
+                    <div class="card">
+                        <div class="card-header news_title">
+                            {{i.title}}
+                        </div>
+                            <div class="m-3 news_description">{{i.description}}</div>
+                        <div class="card-footer small text-muted">
+                            <div class="row mb-0">
+                                <div class="col">
+                                    <div id="data2">{{i.pubDate}}</div>
+                                </div>
+                                <div class="col text-end">
+                                    <div>출처 : 네이버 검색 API - 뉴스</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+    <ul class="pagination d-flex justify-content-center">
+        {% if now_page == 1 %}
+            <li class="page-item disabled"><a class="page-link" href="news?page=1"><<</a></li>
+        {% else %}
+            <li class="page-item"><a class="page-link" href="news?page=1"><<</a></li>
+        {% endif %}
+        {% for i in range_page %}
+            {% if now_page == i %}
+                <li class="page-item active"><a class="page-link" href="news?page={{i}}">{{i}}</a></li>
+            {% else %}
+                <li class="page-item"><a class="page-link" href="news?page={{i}}">{{i}}</a></li>
+            {% endif %}
+        {% endfor %}
+        {% if now_page == page %}
+            <li class="page-item disabled"><a class="page-link" href="news?page={{page}}">>></a></li>
+        {% else %}
+            <li class="page-item"><a class="page-link" href="news?page={{page}}">>></a></li>
+        {% endif %}
+    </ul>
+</div>

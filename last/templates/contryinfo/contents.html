@@ -1,0 +1,651 @@
+<style>
+    .cb{
+      color: white;
+      background:#0074FF;
+    }
+    .image {
+        width:100%;
+        height:100%;
+    }
+
+    .sub-image {
+        opacity:0.0;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        $('#russiainfo').slideUp();
+        $('#chinainfo').slideUp();
+        $('#indonesiainfo').slideUp();
+        $('#japaninfo').slideUp();
+        $('#kazakhstaninfo').slideUp();
+        $('#malaysiainfo').slideUp();
+        $('#philippinesinfo').slideUp();
+        $('#qatarinfo').slideUp();
+        $('#singaporeinfo').slideUp();
+        $('#thailandinfo').slideUp();
+        $('#turkeyinfo').slideUp();
+        $('#uaeinfo').slideUp();
+        $('#uzbekistaninfo').slideUp();
+        $('#vietnaminfo').slideUp();
+        $('#ukinfo').slideUp();
+        $('#netherlandsinfo').slideUp();
+        $('#germanyinfo').slideUp();
+        $('#polandinfo').slideUp();
+        $('#canadainfo').slideUp();
+        $('#usainfo').slideUp();
+
+        $("#inputworld").change(function(){
+            var world=$("#inputworld").val();
+            if(world == "asia"){
+              $("#asia").addClass('show');
+            }else{
+              $("#asia").removeClass('show');
+            }
+            if(world == "eu"){
+              $("#eu").addClass('show');
+            }else{
+              $("#eu").removeClass('show');
+            }
+            if(world == "am"){
+              $("#am").addClass('show');
+            }else{
+              $("#am").removeClass('show');
+            }
+        });
+
+        $('.asia-btn').hover(function(){
+            $('.sub-image').width($('#image-box').width());
+            $('.sub-image').height($('#image-box').height());
+        });
+
+        $('.eu-btn').hover(function(){
+            $('.sub-image').width($('#image-box2').width());
+            $('.sub-image').height($('#image-box2').height());
+        });
+
+        $('.am-btn').hover(function(){
+            $('.sub-image').width($('#image-box3').width());
+            $('.sub-image').height($('#image-box3').height());
+        });
+
+        $('#russiabtn').hover(function(){
+            $(this).addClass('cb')
+            $('#russia').animate({opacity:"1"}, 400);
+            $('#russiainfo').animate({opacity:"1"}, 0);
+            $('#russiainfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#russia').animate({opacity:"0.0"}, 400);
+          $('#russiainfo').slideUp(200);
+          $('#russiainfo').animate({opacity:"0.0"}, 0);
+        });
+
+        $('#chinabtn').hover(function(){
+            $(this).addClass('cb')
+            $('#china').animate({opacity:"1"}, 400);
+            $('#chinainfo').animate({opacity:"1"}, 0);
+            $('#chinainfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#china').animate({opacity:"0.0"}, 400);
+          $('#chinainfo').slideUp(200);
+          $('#chinainfo').animate({opacity:"0.0"}, 0);
+        });
+
+        $('#indonesiabtn').hover(function(){
+            $(this).addClass('cb')
+            $('#indonesia').animate({opacity:"1"}, 400);
+            $('#indonesiainfo').animate({opacity:"1"}, 0);
+            $('#indonesiainfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#indonesiainfo').slideUp(200);
+          $('#indonesia').animate({opacity:"0.0"}, 400);
+          $('#indonesiainfo').animate({opacity:"0.0"}, 0);
+        });
+        $('#japanbtn').hover(function(){
+            $(this).addClass('cb')
+            $('#japan').animate({opacity:"1"}, 400);
+            $('#japaninfo').animate({opacity:"1"}, 0);
+            $('#japaninfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#japaninfo').slideUp(200);
+          $('#japan').animate({opacity:"0.0"}, 400);
+          $('#japaninfo').animate({opacity:"0.0"}, 0);
+        });
+        $('#kazakhstanbtn').hover(function(){
+            $(this).addClass('cb')
+            $('#kazakhstan').animate({opacity:"1"}, 400);
+            $('#kazakhstaninfo').animate({opacity:"1"}, 0);
+            $('#kazakhstaninfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#kazakhstaninfo').slideUp(200);
+          $('#kazakhstan').animate({opacity:"0.0"}, 400);
+          $('#kazakhstaninfo').animate({opacity:"0.0"}, 0);
+        });
+        $('#malaysiabtn').hover(function(){
+            $(this).addClass('cb')
+            $('#malaysia').animate({opacity:"1"}, 400);
+            $('#malaysiainfo').animate({opacity:"1"}, 0);
+            $('#malaysiainfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#malaysiainfo').slideUp(200);
+          $('#malaysia').animate({opacity:"0.0"}, 400);
+          $('#malaysiainfo').animate({opacity:"0.0"}, 0);
+        });
+        $('#philippinesbtn').hover(function(){
+            $(this).addClass('cb')
+            $('#philippines').animate({opacity:"1"}, 400);
+            $('#philippinesinfo').animate({opacity:"1"}, 0);
+            $('#philippinesinfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#philippinesinfo').slideUp(200);
+          $('#philippines').animate({opacity:"0.0"}, 400);
+          $('#philippinesinfo').animate({opacity:"0.0"}, 0);
+        });
+        $('#qatarbtn').hover(function(){
+            $(this).addClass('cb')
+            $('#qatar').animate({opacity:"1"}, 400);
+            $('#qatarinfo').animate({opacity:"1"}, 0);
+            $('#qatarinfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#qatarinfo').slideUp(200);
+          $('#qatar').animate({opacity:"0.0"}, 400);
+          $('#qatarinfo').animate({opacity:"0.0"}, 0);
+        });
+        $('#singaporebtn').hover(function(){
+            $(this).addClass('cb')
+            $('#singapore').animate({opacity:"1"}, 400);
+            $('#singaporeinfo').animate({opacity:"1"}, 0);
+            $('#singaporeinfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#singaporeinfo').slideUp(200);
+          $('#singapore').animate({opacity:"0.0"}, 400);
+          $('#singaporeinfo').animate({opacity:"0.0"}, 0);
+        });
+        $('#thailandbtn').hover(function(){
+            $(this).addClass('cb')
+            $('#thailand').animate({opacity:"1"}, 400);
+            $('#thailandinfo').animate({opacity:"1"}, 0);
+            $('#thailandinfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#thailandinfo').slideUp(200);
+          $('#thailand').animate({opacity:"0.0"}, 400);
+          $('#thailandinfo').animate({opacity:"0.0"}, 0);
+        });
+        $('#turkeybtn').hover(function(){
+            $(this).addClass('cb')
+            $('#turkey').animate({opacity:"1"}, 400);
+            $('#turkeyinfo').animate({opacity:"1"}, 0);
+            $('#turkeyinfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#turkeyinfo').slideUp(200);
+          $('#turkey').animate({opacity:"0.0"}, 400);
+          $('#turkeyinfo').animate({opacity:"0.0"}, 0);
+        });
+        $('#uaebtn').hover(function(){
+            $(this).addClass('cb')
+            $('#uae').animate({opacity:"1"}, 400);
+            $('#uaeinfo').animate({opacity:"1"}, 0);
+            $('#uaeinfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#uaeinfo').slideUp(200);
+          $('#uae').animate({opacity:"0.0"}, 400);
+          $('#uaeinfo').animate({opacity:"0.0"}, 0);
+        });
+        $('#uzbekistanbtn').hover(function(){
+            $(this).addClass('cb')
+            $('#uzbekistan').animate({opacity:"1"}, 400);
+            $('#uzbekistaninfo').animate({opacity:"1"}, 0);
+            $('#uzbekistaninfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#uzbekistaninfo').slideUp(200);
+          $('#uzbekistan').animate({opacity:"0.0"}, 400);
+          $('#uzbekistaninfo').animate({opacity:"0.0"}, 0);
+        });
+        $('#vietnambtn').hover(function(){
+            $(this).addClass('cb')
+            $('#vietnam').animate({opacity:"1"}, 400);
+            $('#vietnaminfo').animate({opacity:"1"}, 0);
+            $('#vietnaminfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#vietnaminfo').slideUp(200);
+          $('#vietnam').animate({opacity:"0.0"}, 400);
+          $('#vietnaminfo').animate({opacity:"0.0"}, 0);
+        });
+
+        $('#ukbtn').hover(function(){
+            console.log('dd');
+            $(this).addClass('cb')
+            $('#uk').animate({opacity:"1"}, 400);
+            $('#ukinfo').animate({opacity:"1"}, 0);
+            $('#ukinfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#ukinfo').slideUp(200);
+          $('#uk').animate({opacity:"0.0"}, 400);
+          $('#ukinfo').animate({opacity:"0.0"}, 0);
+        });
+
+        $('#netherlandsbtn').hover(function(){
+            $(this).addClass('cb')
+            $('#netherlands').animate({opacity:"1"}, 400);
+            $('#netherlandsinfo').animate({opacity:"1"}, 0);
+            $('#netherlandsinfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#netherlandsinfo').slideUp(200);
+          $('#netherlands').animate({opacity:"0.0"}, 400);
+          $('#netherlandsinfo').animate({opacity:"0.0"}, 0);
+        });
+
+        $('#germanybtn').hover(function(){
+            $(this).addClass('cb')
+            $('#germany').animate({opacity:"1"}, 400);
+            $('#germanyinfo').animate({opacity:"1"}, 0);
+            $('#germanyinfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#germanyinfo').slideUp(200);
+          $('#germany').animate({opacity:"0.0"}, 400);
+          $('#germanyinfo').animate({opacity:"0.0"}, 0);
+        });
+
+        $('#polandbtn').hover(function(){
+            $(this).addClass('cb')
+            $('#poland').animate({opacity:"1"}, 400);
+            $('#polandinfo').animate({opacity:"1"}, 0);
+            $('#polandinfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#polandinfo').slideUp(200);
+          $('#poland').animate({opacity:"0.0"}, 400);
+          $('#polandinfo').animate({opacity:"0.0"}, 0);
+        });
+
+        $('#canadabtn').hover(function(){
+            $(this).addClass('cb')
+            $('#canada').animate({opacity:"1"}, 400);
+            $('#canadainfo').animate({opacity:"1"}, 0);
+            $('#canadainfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#canadainfo').slideUp(200);
+          $('#canada').animate({opacity:"0.0"}, 400);
+          $('#canadainfo').animate({opacity:"0.0"}, 0);
+        });
+        $('#usabtn').hover(function(){
+            $(this).addClass('cb')
+            $('#usa').animate({opacity:"1"}, 400);
+            $('#usainfo').animate({opacity:"1"}, 0);
+            $('#usainfo').slideDown(500);
+        }, function(){
+          $(this).removeClass('cb')
+          $('#usainfo').slideUp(200);
+          $('#usa').animate({opacity:"0.0"}, 400);
+          $('#usainfo').animate({opacity:"0.0"}, 0);
+        });
+    });
+</script>
+<div class="container-fluid px-4">
+    <div class="d-flex justify-content-center">
+        <div class="form-floating" style="margin:10px 0px;">
+            <select class="form-select" id="inputworld" name="world" style="width:130px;">
+                <option value="asia">아시아</option>
+                <option value="eu">유럽</option>
+                <option value="am">북아메리카</option>
+            </select>
+            <label for="inputworld">지역</label>
+        </div>
+    </div>
+
+    <div class="collapse show" id="asia">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card mb-3">
+                    <div class="d-flex justify-content-center">
+                        <div id="image-box">
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/russia.png" id="russia" style="z-index:1;"/>
+                                </div>
+                            </div>
+
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/china.png" id="china" style="z-index:1;"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/indonesia.png" id="indonesia" style="z-index:1;"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/japan.png" id="japan" style="z-index:1;"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/kazakhstan.png" id="kazakhstan" style="z-index:1;"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/malaysia.png" id="malaysia" style="z-index:1;"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/philippines.png" id="philippines" style="z-index:1;"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/qatar.png" id="qatar" style="z-index:1;"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/singapore.png" id="singapore" style="z-index:1;"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/thailand.png" id="thailand" style="z-index:1;"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/turkey.png" id="turkey" style="z-index:1;"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/vietnam.png" id="vietnam" style="z-index:1;"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/uae.png" id="uae" style="z-index:1;"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/uzbekistan.png" id="uzbekistan" style="z-index:1;"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/russiainfo.png" id="russiainfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/chinainfo.png" id="chinainfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/indonesiainfo.png" id="indonesiainfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/japaninfo.png" id="japaninfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/kazakhstaninfo.png" id="kazakhstaninfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/malaysiainfo.png" id="malaysiainfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/philippinesinfo.png" id="philippinesinfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/qatarinfo.png" id="qatarinfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/singaporeinfo.png" id="singaporeinfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/thailandinfo.png" id="thailandinfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/uzbekistaninfo.png" id="uzbekistaninfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/turkeyinfo.png" id="turkeyinfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/uaeinfo.png" id="uaeinfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/vietnaminfo.png" id="vietnaminfo"/>
+                                </div>
+                            </div>
+                            <img class="image" src="static/assets/img/contryinfo/asiamap.png" id="ai1" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="btnc">
+                            <a href="{% url 'russia' %}">
+                                <button class="btn asia-btn" style="height:60px; margin:2px 2px; width:150px;" id="russiabtn"><b>러시아</b></button>
+                            </a>
+                            <a href="{% url 'china' %}">
+                                <button class="btn asia-btn" style="height:60px; margin:2px 2px; width:150px;" id="chinabtn"><b>중국</b></button>
+                            </a>
+                            <a href="{% url 'indonesia' %}">
+                                <button class="btn asia-btn" style="height:60px; margin:2px 2px; width:150px;" id="indonesiabtn"><b>인도네시아</b></button>
+                            </a>
+                            <a href="{% url 'japan' %}">
+                                <button class="btn asia-btn" style="height:60px; margin:2px 2px; width:150px;" id="japanbtn"><b>일본</b></button>
+                            </a>
+                            <a href="{% url 'kazakhstan' %}">
+                                <button class="btn asia-btn" style="height:60px; margin:2px 2px; width:150px;" id="kazakhstanbtn"><b>카자흐스탄</b></button>
+                            </a>
+                            <a href="{% url 'malaysia' %}">
+                                <button class="btn asia-btn" style="height:60px; margin:2px 2px; width:150px;" id="malaysiabtn"><b>말레이시아</b></button>
+                            </a>
+                            <a href="{% url 'philippines' %}">
+                                <button class="btn asia-btn" style="height:60px; margin:2px 2px; width:150px;" id="philippinesbtn"><b>필리핀</b></button>
+                            </a>
+                            <a href="{% url 'qatar' %}">
+                                <button class="btn asia-btn" style="height:60px; margin:2px 2px; width:150px;" id="qatarbtn"><b>카타르</b></button>
+                            </a>
+                            <a href="{% url 'singapore' %}">
+                                <button class="btn asia-btn" style="height:60px; margin:2px 2px; width:150px;" id="singaporebtn"><b>싱가폴</b></button>
+                            </a>
+                            <a href="{% url 'thailand' %}">
+                                <button class="btn asia-btn" style="height:60px; margin:2px 2px; width:150px;" id="thailandbtn"><b>태국</b></button>
+                            </a>
+                            <a href="{% url 'turkey' %}">
+                                <button class="btn asia-btn" style="height:60px; margin:2px 2px; width:150px;" id="turkeybtn"><b>터키</b></button>
+                            </a>
+                            <a href="{% url 'uae' %}">
+                                <button class="btn asia-btn" style="height:60px; margin:2px 2px; width:150px;" id="uaebtn"><b>아랍에미리트</b></button>
+                            </a>
+                            <a href="{% url 'uzbekistan' %}">
+                                <button class="btn asia-btn" style="height:60px; margin:2px 2px; width:150px;" id="uzbekistanbtn"><b>우즈베키스탄</b></button>
+                            </a>
+                            <a href="{% url 'vietnam' %}">
+                                <button class="btn asia-btn" style="height:60px; margin:2px 2px; width:150px;" id="vietnambtn"><b>베트남</b></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="collapse" id="eu">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card mb-3">
+                    <div class="d-flex justify-content-center">
+                        <div id="image-box2">
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/uk.png" id="uk" style="z-index:1;"/>
+                                </div>
+                            </div>
+
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/netherlands.png" id="netherlands" style="z-index:1;"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/germany.png" id="germany" style="z-index:1;"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/poland.png" id="poland" style="z-index:1;"/>
+                                </div>
+                            </div>
+
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/ukinfo.png" id="ukinfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/netherlandsinfo.png" id="netherlandsinfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/germanyinfo.png" id="germanyinfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/polandinfo.png" id="polandinfo"/>
+                                </div>
+                            </div>
+                            <img class="image" src="static/assets/img/contryinfo/eu.png" id="eumap" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="btnc">
+                            <a href="{% url 'uk' %}">
+                                <button class="btn eu-btn" style="height:60px; margin:2px 2px; width:150px;" id="ukbtn"><b>영국</b></button>
+                            </a>
+                            <a href="{% url 'netherlands' %}">
+                                <button class="btn eu-btn" style="height:60px; margin:2px 2px; width:150px;" id="netherlandsbtn"><b>네덜란드</b></button>
+                            </a>
+                            <a href="{% url 'germany' %}">
+                                <button class="btn eu-btn" style="height:60px; margin:2px 2px; width:150px;" id="germanybtn"><b>독일</b></button>
+                            </a>
+                            <a href="{% url 'poland' %}">
+                                <button class="btn eu-btn" style="height:60px; margin:2px 2px; width:150px;" id="polandbtn"><b>폴란드</b></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="collapse" id="am">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="card mb-3">
+                    <div class="d-flex justify-content-center">
+                        <div id="image-box3">
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/canada.png" id="canada" style="z-index:1;"/>
+                                </div>
+                            </div>
+
+                            <div class="position-absolute">
+                                <div class="sub-box position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/usa.png" id="usa" style="z-index:1;"/>
+                                </div>
+                            </div>
+
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/canadainfo.png" id="canadainfo"/>
+                                </div>
+                            </div>
+                            <div class="position-absolute">
+                                <div class="position-relative">
+                                    <img class="sub-image" src="static/assets/img/contryinfo/usainfo.png" id="usainfo"/>
+                                </div>
+                            </div>
+
+                            <img class="image" src="static/assets/img/contryinfo/northamerica.png" id="ammap" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="btnc">
+                            <a href="{% url 'canada' %}">
+                                <button class="btn am-btn" style="height:60px; margin:2px 2px; width:150px;" id="canadabtn"><b>캐나다</b></button>
+                            </a>
+                            <a href="{% url 'usa' %}">
+                                <button class="btn am-btn" style="height:60px; margin:2px 2px; width:150px;" id="usabtn"><b>미국</b></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

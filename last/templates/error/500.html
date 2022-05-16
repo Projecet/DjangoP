@@ -1,0 +1,201 @@
+<style>
+#empty {
+  background:white;
+  width: 600px;
+  height: 450px;
+}
+.cb{
+  color:white;
+  background:skyblue;
+}
+
+.box {
+  width: 70%;
+  height: 60%;
+  top: 10%
+  left: 30%;
+  z-index:2;
+  margin: auto;
+  position: absolute;
+}
+.box1 {
+  width: 70%;
+  height: 60%;
+  top: 10%
+  left: 30%;
+  z-index:1;
+  margin: auto;
+  position: absolute;
+}
+
+</style>
+<script>
+$(document).ready(function(){
+    $('#eu').hide()
+
+    $("#inputworld").change(function(){
+        var world=$("#inputworld").val();
+        if(world == "asia"){
+          $("#asia").show();
+        }else{
+          $("#asia").hide();
+        }
+        if(world == "eu"){
+          $("#eu").show();
+        }else{
+          $("#eu").hide();
+        }
+    });
+
+    $('#b1').hover(function(){
+        $(this).addClass('cb')
+        $('#a2').animate({opacity:"1"}, 400)
+    }, function(){
+      $(this).removeClass('cb')
+      $('#a2').animate({opacity:"0.0"}, 400)
+    });
+    $('#b2').hover(function(){
+        $(this).addClass('cb')
+        $('#a3').animate({opacity:"1"}, 400)
+    }, function(){
+      $(this).removeClass('cb')
+      $('#a3').animate({opacity:"0.0"}, 400)
+    });
+    $('#b3').hover(function(){
+        $(this).addClass('cb')
+        $('#a4').animate({opacity:"1"}, 400)
+    }, function(){
+      $(this).removeClass('cb')
+      $('#a4').animate({opacity:"0.0"}, 400)
+    });
+    $('#b4').hover(function(){
+        $(this).addClass('cb')
+        $('#a5').animate({opacity:"1"}, 400)
+    }, function(){
+      $(this).removeClass('cb')
+      $('#a5').animate({opacity:"0.0"}, 400)
+    });
+    $('#b5').hover(function(){
+        $(this).addClass('cb')
+        $('#a6').animate({opacity:"1"}, 400)
+    }, function(){
+      $(this).removeClass('cb')
+      $('#a6').animate({opacity:"0.0"}, 400)
+    });
+
+    $('#b6').hover(function(){
+        $(this).addClass('cb')
+        $('#a7').animate({opacity:"1"}, 400)
+    }, function(){
+      $(this).removeClass('cb')
+      $('#a7').animate({opacity:"0.0"}, 400)
+    });
+
+    $('#b7').hover(function(){
+        $(this).addClass('cb')
+        $('#a8').animate({opacity:"1"}, 400)
+    }, function(){
+      $(this).removeClass('cb')
+      $('#a8').animate({opacity:"0.0"}, 400)
+    });
+
+    $('#b8').hover(function(){
+        $(this).addClass('cb')
+        $('#a9').animate({opacity:"1"}, 400)
+    }, function(){
+      $(this).removeClass('cb')
+      $('#a9').animate({opacity:"0.0"}, 400)
+    });
+
+    $('#b9').hover(function(){
+        $(this).addClass('cb')
+        $('#a10').animate({opacity:"1"}, 400)
+    }, function(){
+      $(this).removeClass('cb')
+      $('#a10').animate({opacity:"0.0"}, 400)
+    });
+
+    $('#b10').hover(function(){
+        $(this).addClass('cb')
+        $('#a11').animate({opacity:"1"}, 400)
+    }, function(){
+      $(this).removeClass('cb')
+      $('#a11').animate({opacity:"0.0"}, 400)
+    });
+
+    $('#b11').hover(function(){
+        $(this).addClass('cb')
+        $('#a12').animate({opacity:"1"}, 400)
+    }, function(){
+      $(this).removeClass('cb')
+      $('#a12').animate({opacity:"0.0"}, 400)
+    });
+
+    $('#b12').hover(function(){
+        $(this).addClass('cb')
+        $('#a13').animate({opacity:"1"}, 400)
+    }, function(){
+      $(this).removeClass('cb')
+      $('#a13').animate({opacity:"0.0"}, 400)
+    });
+
+    $('#b13').hover(function(){
+        $(this).addClass('cb')
+        $('#a14').animate({opacity:"1"}, 400)
+    }, function(){
+      $(this).removeClass('cb')
+      $('#a14').animate({opacity:"0.0"}, 400)
+    });
+
+});
+</script>
+<div>
+  <h1>contents1</h1>
+  <div class="form-floating" style="margin:10px;">
+      <select class="form-select" id="inputworld" name="world" style="width:300px;">
+          <option value="asia">아시아</option>
+          <option value="eu">유럽</option>
+      </select>
+      <label for="inputworld">지역</label>
+  </div>
+  <div id="asia">
+    <div id="boxdiv">
+      <img class="box1 img-fluid" id="a1" src="static/img/asia1.png">
+      <img class="box img-fluid" id="a2" src="static/img/asia2.png" style="opacity:0">
+      <img class="box img-fluid" id="a3" src="static/img/asia4.png" style="opacity:0">
+      <img class="box img-fluid" id="a4" src="static/img/asia6.png" style="opacity:0">
+      <img class="box img-fluid" id="a5" src="static/img/asia3.png" style="opacity:0">
+      <img class="box img-fluid" id="a6" src="static/img/asia5.png" style="opacity:0">
+      <img class="box img-fluid" id="a7" src="static/img/asia7.png" style="opacity:0">
+      <img class="box img-fluid" id="a8" src="static/img/asia8.png" style="opacity:0">
+      <img class="box img-fluid" id="a9" src="static/img/asia9.png" style="opacity:0">
+      <img class="box img-fluid" id="a10" src="static/img/asia10.png" style="opacity:0">
+      <img class="box img-fluid" id="a11" src="static/img/asia11.png" style="opacity:0">
+      <img class="box img-fluid" id="a12" src="static/img/asia12.png" style="opacity:0">
+      <img class="box img-fluid" id="a13" src="static/img/asia13.png" style="opacity:0">
+      <img class="box img-fluid" id="a14" src="static/img/asia14.png" style="opacity:0">
+    </div>
+    <div id="empty"></div>
+    <div id="btnc">
+      <button class="btn" id="b1" style="width:100px; height:100px margin:10px 5px"><b>러시아</b></button>
+      <button class="btn" id="b2" style="width:100px; height:100px margin:10px 5px"><b>???</b></button>
+      <button class="btn" id="b3" style="width:100px; height:100px margin:2px">Click</button>
+      <button class="btn" id="b4" style="width:100px; height:100px margin:2px">Click</button>
+      <button class="btn" id="b5" style="width:100px; height:100px margin:2px">Click</button>
+      <button class="btn" id="b6" style="width:100px; height:100px margin:2px">Click</button>
+      <button class="btn" id="b7" style="width:100px; height:100px margin:2px">Click</button>
+      <button class="btn" id="b8" style="width:100px; height:100px margin:2px">Click</button>
+      <button class="btn" id="b9" style="width:100px; height:100px margin:2px">Click</button>
+      <button class="btn" id="b10" style="width:100px; height:100px margin:2px">Click</button>
+      <button class="btn" id="b11" style="width:100px; height:100px margin:2px">Click</button>
+      <button class="btn" id="b12" style="width:100px; height:100px margin:2px">Click</button>
+      <button class="btn" id="b13" style="width:100px; height:100px margin:2px">Click</button>
+      <p></p>
+    </div>
+  </div>
+
+  <div id="eu">
+    나는 유럽
+  </div>
+
+</div>

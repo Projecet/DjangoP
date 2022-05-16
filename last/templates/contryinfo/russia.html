@@ -1,0 +1,101 @@
+
+
+
+<div class="container-fluid px-4" id="full">
+    <div class="card mb-3">
+        <p></p>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="card mb-3" style="width:30%; background:#0074FF; color:white;">
+            <div align="center" class="card-body">
+                <h1><b>Russia</b></h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div align="center"><b style="font-size: 25px;">입국격리 그래프</b></div>
+                    <div>
+                        <meter min="0" max="3" low="1" high="3" optimum="1" value="1" style="width:100%;"></meter>
+                    </div>
+                    <div align="center">
+                        <table align="center">
+                            <tr align="center">
+                                <td style="width:100px;"><span style="color:green; font-size: 6px;"><b>낮은제한</b></span></td>
+                                <td style="width:100px;"><span style="color:orange; font-size: 6px;"><b>중간제한</b></span></td>
+                                <td style="width:100px;"><span style="color:red; font-size: 6px;"><b>높은제한</b></span></td>
+                            </tr>
+                            <tr align="center">
+                                <td><a style="color:green; font-size:3px;">자가격리불필요</a></td>
+                                <td><a style="color:orange; font-size:3px;">자가격리필요</a></td>
+                                <td><a style="color:red; font-size:3px;">입국불가능국가</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div align="center"><b style="font-size: 25px;">확진자 위험도</b></div>
+                    <div>
+                        <meter min="0" max="4" low="1" high="3" optimum="0.5" value="3" style="width:100%;"></meter>
+                    </div>
+                    <div align="center">
+                        <table align="center">
+                            <tr align="center">
+                                <td style="width:100px;"><span style="color:green; font-size: 6px;"><b>낮은위험</b></span></td>
+                                <td style="width:100px;"><span style="color:orange; font-size: 6px;"><b>중간위험</b></span></td>
+                                <td style="width:100px;"><span style="color:red; font-size: 6px;"><b>높은위험</b></span></td>
+                            </tr>
+                            <tr align="center">
+                                <td><a style="color:green; font-size:3px;">확진자비율 낮음</a></td>
+                                <td><a style="color:orange; font-size:3px;">확진자비율 중간</a></td>
+                                <td><a style="color:red; font-size:3px;">확진자비율 높음</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <details>
+                <summary><b>국가정보</b></summary>
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;수도 <b>모스크바</b> </span><br>
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;언어 <b>러시아어</b> </span><br>
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;면적 <b>17억 982만 5천ha <a style="color:blue">세계 1위</a></b> </span><br>
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;인구 <b>1억 4,600만 명</b> </span><br>
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;종교 <b>러시아정교 이슬람교 유대교 가톨릭교 등</b> </span><br>
+            </details>
+            <hr>
+            <details>
+                <summary><b>여행정보</b></summary>
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;추천 <b>5월~9월</b></span><br>
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;항공 <b>9시간(직항)</b> </span><br>
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;비자 <b>90일 무비자</b> </span><br>
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;전압 <b>220V</b> </span><br>
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;추천여행지 <b>붉은 광장, 에르미타주 미술관, 피의 사원, 성 바실리 성당</b> </span><br>
+            </details>
+            <hr>
+            <details>
+                <summary><b>코로나정보</b></summary>
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;신규확진자 <b style="color:red">74,072명</b> </span><br>
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;누적확진자 <b>11,129,318명</b> </span><br>
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;사망률 <b>2.9%</b> </span><br>
+            </details>
+        </div>
+    </div>
+    <div>
+        <div class="d-flex justify-content-center">
+            <a href="{% url 'contryinfo' %}">
+                <button class="btn" style="height:40px; background:#0074FF; color:white; margin:2px 2px; width:100px;" id=""><b style="font-size:12px;">되돌아가기</b></button>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+<div class="container">
+    <div class="d-flex justify-content-center mt-3">
+        {% if request.session.sessionid == None %}
+            <a href="login">
+                <div class="btn-sm btn-primary btn-block float-start text-decoration-none me-sm-3">
+                    로그인
+                </div>
+            </a>
+        {% else %}
+            <a class="collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#content" aria-expanded="false" aria-controls="image">
+                <div class="btn-sm btn-primary btn-block float-start text-decoration-none me-sm-3">
+                    글쓰기
+                </div>
+            </a>
+        {% endif %}
+    </div>
+    <div class="collapse" id="content" aria-labelledby="headingTwo">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-lg border-0 rounded-lg mt-3">
+                    <div class="card-header"><h3 class="text-center font-weight-light my-1">글쓰기</h3></div>
+                    <div class="card-body">
+                        <form action="contents_impl" method="POST">
+                            {% csrf_token %}
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" id="inputCheck" type="checkbox" name="check" value="check" />
+                                <label class="form-check-label" for="inputCheck">내 백신정보 넣기</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="inputContent" type="text" name="content" placeholder="inputContent"/>
+                                <label for="inputContent">내용</label>
+                            </div>
+                            <div class="mt-3 mb-0">
+                                <div class="d-grid"><input class="btn btn-primary btn-block" type="submit" value="등록"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-3">
+        <div class="col-lg-8">
+            {% for l in list %}
+                <div class="card-deck flex-row flex-nowrap">
+                    <a class="text-decoration-none text-black" href="content?c_id={{l.c_id}}">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                {{l.u_name}}
+                            </div>
+                                {% if l.corona_travel != None %}
+                                    <div class="d-flex justify-content-left">
+                                        <div class="card mt-3 mx-3">
+                                            <div class="m-1">{{l.corona_travel}}</div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                <div class="m-3">{{l.content}}</div>
+                            <div class="card-footer small text-muted">
+                                <div class="row mb-0">
+                                    <div class="col my-auto">
+                                        {{l.regdate}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <ul class="pagination d-flex justify-content-center">
+        {% if now_page == 1 %}
+            <li class="page-item disabled"><a class="page-link" href="contents?page=1"><<</a></li>
+        {% else %}
+            <li class="page-item"><a class="page-link" href="contents?page=1"><<</a></li>
+        {% endif %}
+        {% for i in range_page %}
+            {% if now_page == i %}
+                <li class="page-item active"><a class="page-link" href="contents?page={{i}}">{{i}}</a></li>
+            {% else %}
+                <li class="page-item"><a class="page-link" href="contents?page={{i}}">{{i}}</a></li>
+            {% endif %}
+        {% endfor %}
+        {% if now_page == page %}
+            <li class="page-item disabled"><a class="page-link" href="contents?page={{page}}">>></a></li>
+        {% else %}
+            <li class="page-item"><a class="page-link" href="contents?page={{page}}">>></a></li>
+        {% endif %}
+    </ul>
+</div>
